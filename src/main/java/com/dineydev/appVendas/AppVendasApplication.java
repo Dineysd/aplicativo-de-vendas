@@ -1,12 +1,12 @@
-package com.dineydev.cursoVendas;
+package com.dineydev.appVendas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CursoVendasApplication {
+public class AppVendasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CursoVendasApplication.class, args);
+		SpringApplication.run(AppVendasApplication.class, args);
 	}
 }
