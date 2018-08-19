@@ -16,6 +16,8 @@ public class Categoria implements Serializable {
 	private Integer codigo;
 	private String nome;
 	
+	public Categoria() {
+	}
 	public Categoria(Integer codigo, String nome) {
 		super();
 		this.codigo = codigo;
