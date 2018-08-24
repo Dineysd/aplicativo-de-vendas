@@ -51,8 +51,8 @@ public class Categoria implements Serializable {
 		return produtos;
 	}
 
-	public void setProdutos(Produto produto) {
-		this.produtos.add(produto);
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
 
 	@Override
