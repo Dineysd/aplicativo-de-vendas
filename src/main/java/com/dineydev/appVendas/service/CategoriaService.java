@@ -15,9 +15,9 @@ public class CategoriaService {
 	@Autowired
 	private CategoriaRepository repo;
 	
-	/*public void salvar(Categoria categoria) {
+	public void salvar(Categoria categoria) {
 		repo.save(categoria);
-	}*/
+	}
 	
 	public Categoria find(Integer id) {
 		Optional<Categoria> obj = repo.findById(id);

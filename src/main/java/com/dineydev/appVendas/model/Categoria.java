@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Categoria implements Serializable {
@@ -18,6 +19,7 @@ public class Categoria implements Serializable {
 	private Integer codigo;
 	private String nome;
 	
+	@ManyToMany(mappedBy="categorias")
 	List<Produto> produtos = new ArrayList<>();
 	
 	public Categoria() {
@@ -49,8 +51,8 @@ public class Categoria implements Serializable {
 		return produtos;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
+	public void setProdutos(Produto produto) {
+		this.produtos.add(produto);
 	}
 
 	@Override
