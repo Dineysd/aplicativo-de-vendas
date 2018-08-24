@@ -1,6 +1,8 @@
 package com.dineydev.appVendas.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,8 +18,11 @@ public class Categoria implements Serializable {
 	private Integer codigo;
 	private String nome;
 	
+	List<Produto> produtos = new ArrayList<>();
+	
 	public Categoria() {
 	}
+	
 	public Categoria(Integer codigo, String nome) {
 		super();
 		this.codigo = codigo;
@@ -38,6 +43,14 @@ public class Categoria implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
 
 	@Override
